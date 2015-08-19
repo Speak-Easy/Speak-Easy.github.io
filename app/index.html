@@ -1,0 +1,193 @@
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#top">SpeakEasy</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden page-scroll">
+            <a href="#top"></a>
+          </li>
+          <li class="page-scroll">
+            <a href="#about">About</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#consumer">For Consumers</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#business">For Restaurants</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="container" id="top">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="intro-text">
+            <span class="name">SpeakEasy</span>
+            <hr class="star-light">
+            <div class="col-lg-6 col-lg-offset-3">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Your email address">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Sign up</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Portfolio Grid Section -->
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>About</h2>
+          <hr class="star-primary">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-2">
+          <p>Some text description of our business.</p>
+        </div>
+        <div class="col-lg-4">
+          <p>More text on this side as well, if necessary.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consumer Section -->
+  <section class="success" id="consumer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>SpeakEasy for Consumers</h2>
+          <hr class="star-light">
+        </div>
+      </div>
+      <div class="row">
+        App-related content goes in this section.
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Section -->
+  <section id="business">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>SpeakEasy for Restaurants</h2>
+          <hr class="star-primary">
+        </div>
+      </div>
+      <div class="row">
+        Restaurant-facing and NLP related content goes here.
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="footer-above">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col col-md-6">
+            <h3>Around the Web</h3>
+            <ul class="list-inline">
+              <li>
+                <a href="https://itunes.apple.com/us/app/speakeasy-reviews/id984334367?mt=8" title="Consumer App" class="btn-social btn-outline" target="_blank"><span class="glyphicon glyphicon-user"></span></a>
+              </li>
+              <li>
+                <a href="https://itunes.apple.com/us/app/speakeasy-business/id995812911?mt=8" title="Restaurant App" class="btn-social btn-outline" target="_blank"><span class="glyphicon glyphicon-qrcode"></span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col col-md-6">
+            <h3>More Extraneous Information?</h3>
+            <p>Not sure what could go here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-below">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            Copyright &copy; Chatter Inc. 2015
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-top page-scroll visible-xs visible-sm">
+    <a class="btn btn-primary" href="#top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+
+      <!-- <div ng-view></div> -->
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="view1/view1.js"></script>
+<script src="view2/view2.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>
