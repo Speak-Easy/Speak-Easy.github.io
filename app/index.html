@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="app.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="//www.parsecdn.com/js/parse-1.5.0.min.js"></script>
 </head>
 <body>
 
@@ -66,9 +67,9 @@
             <hr class="star-light">
             <div class="col-lg-6 col-lg-offset-3">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Your email address">
+                <input name="email-field" type="text" class="form-control" placeholder="Your email address">
                 <span class="input-group-btn">
-                  <button class="btn btn-default" type="button">Sign up</button>
+                  <button class="btn btn-default" type="button" onclick="joinWaitlist(document.getElementsByName('email-field')[0].value)">Sign up</button>
                 </span>
               </div>
             </div>
