@@ -2,10 +2,10 @@
 
 
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="app" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,7 +39,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li class="hidden page-scroll">
-            <a href="#top"></a>
+            <a href="#jumbotron"></a>
           </li>
           <li class="page-scroll">
             <a href="#about">About</a>
@@ -48,7 +48,7 @@
             <a href="#consumer">For Consumers</a>
           </li>
           <li class="page-scroll">
-            <a href="#business">For Restaurants</a>
+            <a href="#restaurant">For Restaurants</a>
           </li>
         </ul>
       </div>
@@ -57,79 +57,20 @@
     <!-- /.container-fluid -->
   </nav>
 
-  <!-- Header -->
-  <header>
-    <div class="container" id="top">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="intro-text">
-            <span class="name">SpeakEasy</span>
-            <hr class="star-light">
-            <div class="col-lg-6 col-lg-offset-3">
-              <div class="input-group">
-                <input name="email-field" type="text" class="form-control" placeholder="Your email address">
-                <span class="input-group-btn">
-                  <button class="btn btn-default" type="button" onclick="joinWaitlist(document.getElementsByName('email-field')[0].value)">Sign up</button>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- Jumbotron -->
+  <header class="success">
+    <speakeasy-jumbotron id="jumbotron"></speakeasy-jumbotron>
+    
   </header>
 
-  <!-- Portfolio Grid Section -->
+  <!-- About Us -->
+  <about id="about"></about>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2>About</h2>
-          <hr class="star-primary">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-lg-offset-2">
-          <p>Some text description of our business.</p>
-        </div>
-        <div class="col-lg-4">
-          <p>More text on this side as well, if necessary.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Consumer Info -->
+  <consumer id="consumer"></consumer>
 
-  <!-- Consumer Section -->
-  <section class="success" id="consumer">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2>SpeakEasy for Consumers</h2>
-          <hr class="star-light">
-        </div>
-      </div>
-      <div class="row">
-        App-related content goes in this section.
-      </div>
-    </div>
-  </section>
-
-  <!-- Business Section -->
-  <section id="business">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2>SpeakEasy for Restaurants</h2>
-          <hr class="star-primary">
-        </div>
-      </div>
-      <div class="row">
-        Restaurant-facing and NLP related content goes here.
-      </div>
-    </div>
-  </section>
+  <!-- Restaurant Info -->
+  <restaurant id="restaurant"></restaurant>
 
   <!-- Footer -->
   <footer class="text-center">
@@ -183,12 +124,14 @@
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
 <script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 <script src="app.js"></script>
-<script src="view1/view1.js"></script>
-<script src="view2/view2.js"></script>
-<script src="components/version/version.js"></script>
-<script src="components/version/version-directive.js"></script>
-<script src="components/version/interpolate-filter.js"></script>
+<script src="services/ParseService.js"></script>
+<script src="components/about/aboutDirective.js"></script>
+<script src="components/consumer/consumerDirective.js"></script>
+<script src="components/restaurant/restaurantDirective.js"></script>
+<script src="components/jumbotron/jumbotronDirective.js"></script>
 </body>
 </html>
