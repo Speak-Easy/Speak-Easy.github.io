@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -19,7 +16,7 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   <script src="//www.parsecdn.com/js/parse-1.5.0.min.js"></script>
 </head>
-<body>
+<body ng-controller="AppCtrl">
 
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -32,23 +29,23 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#top">SpeakEasy</a>
+        <a class="navbar-brand" href ng-click="goToTop()">SpeakEasy</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li class="hidden page-scroll">
-            <a href="#jumbotron"></a>
+            <a href ng-click="goToTop()"></a>
           </li>
           <li class="page-scroll">
-            <a href="#about">About</a>
+            <a href ng-click="goToAbout()">About</a>
           </li>
           <li class="page-scroll">
-            <a href="#consumer">How it Works</a>
+            <a href ng-click="goToHowItWorks()">How it Works</a>
           </li>
           <li class="page-scroll">
-            <a href="#restaurant">For Restaurants</a>
+            <a href ng-click="goToRestaurant()">For Restaurants</a>
           </li>
         </ul>
       </div>
@@ -59,7 +56,8 @@
 
   <!-- Jumbotron -->
   <header class="success">
-    <speakeasy-jumbotron id="jumbotron"></speakeasy-jumbotron>
+    <!--<speakeasy-jumbotron id="jumbotron"></speakeasy-jumbotron>-->
+    <div id="top" ui-view></div>
     
   </header>
 
@@ -67,7 +65,7 @@
   <about id="about"></about>
 
   <!-- Consumer Info -->
-  <consumer id="consumer"></consumer>
+  <consumer id="howitworks"></consumer>
 
   <!-- Restaurant Info -->
   <restaurant id="restaurant"></restaurant>
@@ -108,7 +106,7 @@
 
   <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
   <div class="scroll-top page-scroll visible-xs visible-sm">
-    <a class="btn btn-primary" href="#top">
+    <a class="btn btn-primary" href ng-click="goToTop()">
       <i class="fa fa-chevron-up"></i>
     </a>
   </div>
@@ -132,6 +130,6 @@
 <script src="components/about/aboutDirective.js"></script>
 <script src="components/consumer/consumerDirective.js"></script>
 <script src="components/restaurant/restaurantDirective.js"></script>
-<script src="components/jumbotron/jumbotronDirective.js"></script>
+<script src="components/jumbotron/jumbotron.js"></script>
 </body>
 </html>
